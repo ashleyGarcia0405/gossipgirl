@@ -353,3 +353,89 @@ body {
     padding: 1.5rem;
   }
 }
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5rem 0;
+}
+
+.listen-button,
+.icloud-button {
+  background: transparent;
+  color: #f8fafc;
+  border: 2px solid #f472b6;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Playfair Display', Georgia, serif;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(244, 114, 182, 0.2);
+  min-width: 200px;
+}
+
+.icloud-button {
+  border-color: #60a5fa;
+  box-shadow: 0 4px 15px rgba(96, 165, 250, 0.2);
+}
+
+.icloud-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #60a5fa, #3b82f6);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  z-index: 0;
+}
+
+.icloud-button:hover:not(:disabled)::before {
+  transform: translateX(0);
+}
+
+.icloud-button:hover:not(:disabled) {
+  color: #f8fafc;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(96, 165, 250, 0.3);
+}
+
+.icloud-button.connected {
+  background: linear-gradient(45deg, #60a5fa, #3b82f6);
+  color: #f8fafc;
+  border-color: #60a5fa;
+}
+
+.icloud-button.loading {
+  background: #334155;
+  color: #94a3b8;
+  border-color: #475569;
+  cursor: wait;
+}
+
+.icloud-button.loading .apple-icon {
+  animation: spin 1s linear infinite;
+}
+
+.apple-icon {
+  display: inline-block;
+  margin-right: 0.5rem;
+  font-style: normal;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
