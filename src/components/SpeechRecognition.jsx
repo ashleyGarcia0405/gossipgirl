@@ -62,7 +62,6 @@ function SpeechRecognition() {
 
   return (
     <div className="speech-recognition">
-      <h2>Speech Recognition</h2>
       <button 
         onClick={toggleListening}
         className={`listen-button ${isListening ? 'listening' : ''}`}
