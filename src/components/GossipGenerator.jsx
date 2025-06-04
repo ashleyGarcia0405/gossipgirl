@@ -60,7 +60,7 @@ function GossipGenerator({ transcript }) {
         disabled={isGenerating || !transcript.trim()}
         className={`generate-button ${isGenerating ? 'generating' : ''}`}
       >
-        {isGenerating ? 'Generating Gossip...' : 'Generate Gossip'}
+        <span>{isGenerating ? 'Generating Gossip...' : 'Generate Gossip'}</span>
       </button>
       {error && <p className="error">{error}</p>}
       {gossip && (

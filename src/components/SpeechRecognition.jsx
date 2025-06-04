@@ -66,7 +66,7 @@ function SpeechRecognition() {
         onClick={toggleListening}
         className={`listen-button ${isListening ? 'listening' : ''}`}
       >
-        {isListening ? 'Stop Listening' : 'Start Listening'}
+        <span>{isListening ? 'Stop Listening' : 'Start Listening'}</span>
       </button>
       {error && <p className="error">{error}</p>}
       <div className="transcript">
