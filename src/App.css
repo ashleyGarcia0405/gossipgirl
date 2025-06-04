@@ -180,3 +180,64 @@ body {
     padding: 1.5rem;
   }
 }
+
+.gossip-generator {
+  margin-top: 2rem;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.generate-button {
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 1rem 0;
+}
+
+.generate-button:hover:not(:disabled) {
+  background-color: #ff1493;
+  transform: scale(1.05);
+}
+
+.generate-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.generate-button.generating {
+  background-color: #ff69b4;
+  animation: pulse 1.5s infinite;
+}
+
+.gossip-content {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.gossip-content h3 {
+  color: #ff69b4;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  font-family: 'Georgia', serif;
+}
+
+.gossip-text {
+  color: #333;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  font-family: 'Georgia', serif;
+}
+
+.gossip-text p {
+  margin-bottom: 1rem;
+}

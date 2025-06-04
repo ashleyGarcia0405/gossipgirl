@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import GossipGenerator from './GossipGenerator';
 
 function SpeechRecognition() {
   const [transcript, setTranscript] = useState('');
@@ -73,6 +74,7 @@ function SpeechRecognition() {
         <h3>Transcript:</h3>
         <p>{transcript || 'Speak to see transcript here...'}</p>
       </div>
+      <GossipGenerator transcript={transcript} />
     </div>
   );
 }
